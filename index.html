@@ -3,205 +3,247 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Ellen Habash — CV</title>
-  <meta name="description" content="CV website for Ellen Habash — Final‑Year Computer Science student and ERP Support & Developer at ai1 | All In One Enterprise Solutions." />
+  <meta name="description" content="Ellen Habash — Final-Year Computer Science student and ERP Support & Developer at ai1 | All In One Enterprise Solutions." />
+
+  <!-- Font (safe + professional) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b1320;
-      --card: #0f1b31;
-      --text: #e8eefc;
-      --muted: #a6b2c9;
-      --accent: #5aa9ff; /* subtle blue */
-      --accent-2: #6ee7b7; /* mint */
-      --ring: rgba(90,169,255,.35);
-      --border: rgba(255,255,255,.08);
-      --shadow: 0 10px 30px rgba(2,12,27,.35);
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7f9fc; --card:#ffffff; --text:#0b1320; --muted:#4a5568; --border:#e6eaf2; --ring:rgba(90,169,255,.5); --shadow:0 10px 30px rgba(15,27,49,.08);
-      }
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{opacity:.9}
-    .container{max-width:980px;margin-inline:auto;padding:24px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
-    .grid{display:grid;gap:20px}
-    header.hero{position:relative;overflow:hidden}
-    .hero-inner{display:grid;gap:18px;padding:28px 28px 22px}
-    .badge{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text);background:linear-gradient(135deg,var(--accent) 0%, var(--accent-2) 100%);padding:8px 12px;border-radius:999px}
-    .name{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0}
-    .title{font-size:clamp(16px,2.4vw,20px);color:var(--muted);margin:0}
-    .meta{display:flex;flex-wrap:wrap;gap:12px;color:var(--muted)}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-    .btn{--_bg:transparent;--_fg:var(--text);display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);color:var(--_fg);background:var(--_bg);backdrop-filter:saturate(140%) blur(6px);transition:transform .06s ease, background .2s}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{--_bg:rgba(90,169,255,.12);border-color:var(--ring)}
-    .section{padding:22px}
-    .section h2{margin:0 0 14px;font-size:20px}
-    .item{padding:16px;border-left:3px solid transparent;border-radius:12px}
-    .item:hover{border-color:var(--accent);background:rgba(90,169,255,.06)}
-    .item h3{margin:0 0 6px;font-size:17px}
-    .item .sub{color:var(--muted);font-size:14px}
-    .skills{display:flex;flex-wrap:wrap;gap:10px}
-    .chip{padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03)}
-    footer{opacity:.8;text-align:center;padding:24px;font-size:13px}
-    /* print */
-    @media print{
-      body{background:white;color:black}
-      .card{box-shadow:none;border-color:#ddd}
-      .btn, .actions{display:none !important}
-      a{color:inherit;text-decoration:underline}
-    }
-  </style>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO / Schema -->
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Ellen Habash",
-      "jobTitle":"ERP & Business Solutions Support / Developer",
-      "address":{"@type":"PostalAddress","addressLocality":"Jerusalem","addressCountry":"IL"},
-      "alumniOf":[{"@type":"CollegeOrUniversity","name":"Jerusalem Multidisciplinary College"}],
-      "worksFor":{"@type":"Organization","name":"ai1 | All In One Enterprise Solutions"}
-    }
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Ellen Habash",
+    "jobTitle":"ERP & Business Solutions Support / Developer",
+    "address":{"@type":"PostalAddress","addressLocality":"Jerusalem"},
+    "email":"ellenhabash2@gmail.com",
+    "sameAs":[
+      "https://github.com/ellenhabash2",
+      "https://www.linkedin.com/in/ellen-habash-164571280/"
+    ],
+    "alumniOf":[{"@type":"CollegeOrUniversity","name":"Jerusalem Multidisciplinary College"}]
+  }
   </script>
 </head>
+
 <body>
-<div class="container grid">
-  <!-- HERO -->
-  <header class="hero card">
-    <div class="hero-inner">
-      <span class="badge" aria-label="Open to opportunities">Available for opportunities</span>
-      <h1 class="name">Ellen Habash</h1>
-      <p class="title">🎓 Final‑Year Computer Science Student · ERP Support & Developer @ <strong>ai1 | All In One Enterprise Solutions</strong></p>
-      <div class="meta" aria-label="Contact and location">
-        <span>📍 Jerusalem, Israel</span>
-        <span>·</span>
-        <a href="#contact">Contact info</a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/ellen-habash-164571280/" rel="noopener">LinkedIn</a>
+  <main class="container grid">
+
+    <!-- HERO -->
+    <header class="card hero" aria-label="Header">
+      <div class="hero-inner">
+        <span class="badge">Available for opportunities</span>
+
+        <h1 class="name">Ellen Habash</h1>
+        <p class="title">
+          Final-Year Computer Science Student · ERP Support & Developer @
+          <strong>ai1 | All In One Enterprise Solutions</strong>
+        </p>
+
+        <div class="meta" aria-label="Contact links">
+          <span class="meta-item">📍 Jerusalem</span>
+          <span class="dot">·</span>
+          <a class="meta-link" href="mailto:ellenhabash2@gmail.com">ellenhabash2@gmail.com</a>
+          <span class="dot">·</span>
+          <a class="meta-link" href="https://github.com/ellenhabash2" rel="noopener">GitHub</a>
+          <span class="dot">·</span>
+          <a class="meta-link" href="https://www.linkedin.com/in/ellen-habash-164571280/" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="#" onclick="window.print();return false;">🖨️ Print / Save PDF</a>
+          <a class="btn" href="mailto:ellenhabash2@gmail.com">✉️ Email</a>
+          <a class="btn" href="#projects">⭐ Projects</a>
+        </div>
       </div>
-      <div class="actions">
-        <a class="btn primary" href="#" onclick="window.print();return false;">🖨️ Print / Save PDF</a>
-        <a class="btn" href="#contact">✉️ Email</a>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="card section" id="about">
+      <h2>About</h2>
+      <p>
+        I’m a final-year Computer Science student with hands-on experience in <strong>ERP systems</strong>,
+        <strong>Odoo development</strong>, <strong>SAP Business One</strong>, and <strong>business process optimization</strong>.
+      </p>
+      <p>
+        At <strong>ai1 | All In One Enterprise Solutions</strong>, I contribute to both business and development work —
+        helping clients streamline operations through customized workflows, reporting, and process automation.
+      </p>
+      <p>
+        I enjoy building practical systems — from enterprise solutions to software projects in <strong>C++</strong> —
+        applying clean architecture, teamwork, and analytical thinking.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="card section" id="experience">
+      <h2>Experience</h2>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>ERP &amp; Business Solutions Support / Developer</h3>
+          <div class="sub">ai1 | All In One Enterprise Solutions · Part-time · Nov 2022 – Present · Hybrid</div>
+        </header>
+        <ul class="bullets">
+          <li>Support ERP implementations using <strong>Odoo</strong> and <strong>SAP Business One</strong>, combining technical development with business support.</li>
+          <li>Customize ERP features and workflows; assist with configuration, maintenance, and module support.</li>
+          <li>Collaborate with consultants to translate operational needs into effective system processes and automation.</li>
+          <li>Assist with testing, documentation, and user training to improve adoption and maintainability.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Technovation Girls Challenge — Participant</h3>
+          <div class="sub">Sep 2020 – Sep 2021</div>
+        </header>
+        <ul class="bullets">
+          <li>Co-developed <strong>SUYANA</strong>, an Android safety application (MIT App Inventor) to support women facing violence.</li>
+          <li>Produced business plan, user research, and pitch; coordinated with community partners for validation.</li>
+          <li>Earned <strong>2nd place</strong> in local finals (Bethlehem University) for innovation and impact.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="card section" id="projects">
+      <h2>Selected Projects & Coursework</h2>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Advanced C++ Tower Defense Game</h3>
+          <div class="sub">Modern C++ · Clean architecture · Team project</div>
+        </header>
+        <ul class="bullets">
+          <li>Designed a modular architecture using OOP principles and maintainable system boundaries.</li>
+          <li>Integrated external libraries (e.g., SFML / physics) with performance-aware resource handling.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Mobile Robotics & Mapping</h3>
+          <div class="sub">Odometry · Control · Mapping</div>
+        </header>
+        <ul class="bullets">
+          <li>Built and tuned robot navigation using sensor feedback, odometry logging, and PID-style control.</li>
+          <li>Collected and analyzed movement/sensor data to improve stability and path behavior.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Image Processing Coursework</h3>
+          <div class="sub">Filtering · Segmentation · Robust detection</div>
+        </header>
+        <ul class="bullets">
+          <li>Implemented masking, filtering, edge detection, segmentation, and evaluated results across tasks.</li>
+          <li>Applied line/shape detection concepts (e.g., Hough transform) for robust detection workflows.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Cybersecurity / Malware & Applications Coursework</h3>
+          <div class="sub">Vulnerabilities · Malware behavior · Defensive analysis</div>
+        </header>
+        <ul class="bullets">
+          <li>Studied core security topics including vulnerabilities, malware behavior, and defensive analysis workflows.</li>
+          <li>Practiced structured documentation and reporting of findings in a clear technical format.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="card section" id="education">
+      <h2>Education</h2>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Jerusalem Multidisciplinary College — B.Sc. Computer Science</h3>
+          <div class="sub">Expected Graduation: September 2026</div>
+          <div class="sub">Selected electives: Mobile Robotics · Image Processing · Cybersecurity (coursework)</div>
+        </header>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>The Hebrew University of Jerusalem — Mechina (Science)</h3>
+          <div class="sub">2021 – 2022 · Grade: 95</div>
+        </header>
+      </article>
+    </section>
+
+    <!-- MENTORING / VOLUNTEERING -->
+    <section class="card section" id="mentoring">
+      <h2>Mentoring & Volunteering</h2>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>College Mentoring — First-Year CS Student</h3>
+          <div class="sub">Ongoing · Selected based on strong academic performance</div>
+        </header>
+        <ul class="bullets">
+          <li>Mentor a first-year Computer Science student throughout the year, supporting study planning, problem-solving, and course success.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Irtekaa — Volunteer Mentor / Tutor</h3>
+          <div class="sub">May 2024 – Present</div>
+        </header>
+        <p class="para">Mentor students in academic skills and personal development through regular weekly sessions.</p>
+      </article>
+
+      <article class="item">
+        <header class="item-head">
+          <h3>Kriesh Orphanage — Activity Leader</h3>
+          <div class="sub">Jan 2019 – Jul 2019</div>
+        </header>
+        <p class="para">Led educational and recreational activities for children aged 3–10; strengthened communication and organization skills.</p>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="card section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="chip">Odoo</span>
+        <span class="chip">SAP Business One</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">C++</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">Git</span>
+        <span class="chip">Workflow Automation</span>
+        <span class="chip">Software Architecture</span>
+        <span class="chip">Mentorship</span>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="card section" id="about">
-    <h2>About</h2>
-    <p>I’m a final‑year Computer Science student with hands‑on experience in <strong>ERP systems</strong>, <strong>Odoo development</strong>, <strong>SAP Business One</strong>, and <strong>business process optimization</strong>.</p>
-    <p>At <strong>ai1 | All In One Enterprise Solutions</strong>, I contribute to both the business and development sides of ERP projects — helping clients streamline operations through customized workflows, data reporting, and process automation.</p>
-    <p>I enjoy building tools and systems that solve real problems — from business solutions to interactive projects like <strong>C++</strong> and <strong>SFML</strong>‑based games — applying clean architecture, teamwork, and analytical thinking.</p>
-    <p>Beyond my technical work, I’m passionate about mentorship and education. I’ve volunteered with <strong>Perach</strong> and <strong>Irtekaa</strong>, and this year I was selected to mentor a first‑year Computer Science student in recognition of my academic performance and leadership.</p>
-  </section>
+    <!-- CONTACT -->
+    <section class="card section" id="contact">
+      <h2>Contact</h2>
+      <p class="para"><strong>Email:</strong> <a href="mailto:ellenhabash2@gmail.com">ellenhabash2@gmail.com</a></p>
+      <p class="para"><strong>GitHub:</strong> <a href="https://github.com/ellenhabash2" rel="noopener">github.com/ellenhabash2</a></p>
+      <p class="para"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ellen-habash-164571280/" rel="noopener">linkedin.com/in/ellen-habash-164571280</a></p>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section class="card section" id="experience">
-    <h2>Experience</h2>
+    <footer class="footer" aria-label="Footer">
+      © <span id="year"></span> Ellen Habash · Built with HTML/CSS · Print this page to save as PDF
+    </footer>
 
-    <article class="item">
-      <h3>ERP &amp; Business Solutions Support / Developer</h3>
-      <div class="sub">ai1 | All In One Enterprise Solutions · Part‑time · Nov 2022 – Present · Hybrid, Israel</div>
-      <ul>
-        <li>Contribute to ERP projects using <strong>Odoo</strong> and <strong>SAP Business One</strong>, combining business support with technical development.</li>
-        <li>Develop and customize ERP features; configure and maintain client systems.</li>
-        <li>Collaborate with consultants on workflow optimization and process automation.</li>
-        <li>Assist with testing, documentation, and user training.</li>
-      </ul>
-    </article>
+  </main>
 
-    <article class="item">
-      <h3>Technovation Girls Challenge — Participant</h3>
-      <div class="sub">Sep 2020 – Sep 2021 · Israel</div>
-      <ul>
-        <li>Co‑developed <strong>SUYANA</strong>, an Android app supporting women facing violence (MIT App Inventor).
-        </li>
-        <li>Created business plan, user research, and pitch video; coordinated with community partners.</li>
-        <li><strong>2nd place</strong>, Bethlehem University finals (innovation & impact).</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- PROJECTS (optional, showcases) -->
-  <section class="card section" id="projects">
-    <h2>Selected Projects</h2>
-    <article class="item">
-      <h3>Tower Defense Game (C++ / SFML)</h3>
-      <div class="sub">Clean architecture · Team project</div>
-      <p>Built a full‑featured game showcasing OOP, resource management, state machines, animations, and polished UX.</p>
-    </article>
-    <article class="item">
-      <h3>Weather App (React · Node.js · MySQL)</h3>
-      <div class="sub">Full‑stack course project</div>
-      <p>Implemented search, API integration, and persistence; presented app and teamwork process at demo day.</p>
-    </article>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="card section" id="education">
-    <h2>Education</h2>
-    <article class="item">
-      <h3>Jerusalem Multidisciplinary College — B.Sc. Computer Science</h3>
-      <div class="sub">2023 – 2026</div>
-    </article>
-    <article class="item">
-      <h3>The Hebrew University of Jerusalem — Mechina (Science)</h3>
-      <div class="sub">2021 – 2022 · Grade: 95</div>
-    </article>
-  </section>
-
-  <!-- VOLUNTEERING -->
-  <section class="card section" id="volunteering">
-    <h2>Volunteering</h2>
-    <article class="item">
-      <h3>Irtekaa — Volunteer Mentor / Tutor</h3>
-      <div class="sub">May 2024 – Present</div>
-      <p>Mentor students in academic skills and personal development through regular weekly sessions.</p>
-    </article>
-    <article class="item">
-      <h3>Kriesh Orphanage — Activity Leader</h3>
-      <div class="sub">Jan 2019 – Jul 2019</div>
-      <p>Led educational and recreational activities for children aged 3–10; improved communication and organization.</p>
-    </article>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="card section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span class="chip">Odoo</span>
-      <span class="chip">SAP Business One</span>
-      <span class="chip">SQL</span>
-      <span class="chip">C++</span>
-      <span class="chip">Python</span>
-      <span class="chip">Process Automation</span>
-      <span class="chip">Business Analysis</span>
-      <span class="chip">Teamwork</span>
-      <span class="chip">Mentorship</span>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="card section" id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:ellen.email@example.com">ellenhabash2@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ellen-habash-164571280/" rel="noopener">linkedin.com/in/ellen-habash-164571280</a></p>
-  </section>
-
-  <footer class="section" aria-label="Footer">
-    © <span id="year"></span> Ellen Habash · Built with HTML & CSS · Print this page to save as PDF
-  </footer>
-</div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
