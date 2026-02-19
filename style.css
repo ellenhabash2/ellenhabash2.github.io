@@ -1,0 +1,239 @@
+/* ============================
+   Ellen Habash — CV (Pro CSS)
+   Clean, modern, print-friendly
+   ============================ */
+
+:root{
+  --bg:#0b1320;
+  --card:#0f1b31;
+  --text:#e8eefc;
+  --muted:#a6b2c9;
+
+  --accent:#5aa9ff;
+  --accent2:#6ee7b7;
+  --ring:rgba(90,169,255,.35);
+
+  --border:rgba(255,255,255,.08);
+  --shadow:0 10px 30px rgba(2,12,27,.35);
+
+  --radius:20px;
+  --radius-sm:12px;
+
+  --maxw:980px;
+}
+
+/* Light mode automatically */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --text:#0b1320;
+    --muted:#4a5568;
+
+    --border:#e6eaf2;
+    --ring:rgba(90,169,255,.45);
+    --shadow:0 10px 30px rgba(15,27,49,.08);
+  }
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+a:hover{opacity:.92}
+
+/* Layout */
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:24px;
+}
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+/* Card */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+.hero-inner{
+  display:grid;
+  gap:16px;
+  padding:28px 28px 22px;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+  letter-spacing:.2px;
+  color:var(--text);
+  background:linear-gradient(135deg,var(--accent) 0%, var(--accent2) 100%);
+  padding:8px 12px;
+  border-radius:999px;
+  width:fit-content;
+}
+.name{
+  font-size:clamp(28px,4vw,40px);
+  line-height:1.15;
+  margin:0;
+}
+.title{
+  font-size:clamp(16px,2.4vw,20px);
+  margin:0;
+  color:var(--muted);
+}
+
+/* Meta row */
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  color:var(--muted);
+  align-items:center;
+}
+.dot{opacity:.7}
+.meta-link{color:var(--accent)}
+.meta-item{color:var(--muted)}
+
+/* Buttons */
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:4px;
+}
+.btn{
+  --_bg:transparent;
+  --_fg:var(--text);
+
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:var(--radius-sm);
+  border:1px solid var(--border);
+  color:var(--_fg);
+  background:var(--_bg);
+
+  backdrop-filter:saturate(140%) blur(6px);
+  transition:transform .08s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{
+  --_bg:rgba(90,169,255,.12);
+  border-color:var(--ring);
+}
+
+/* Sections */
+.section{
+  padding:22px;
+}
+.section h2{
+  margin:0 0 14px;
+  font-size:20px;
+  letter-spacing:.2px;
+}
+
+/* Items */
+.item{
+  padding:16px;
+  border-left:3px solid transparent;
+  border-radius:var(--radius-sm);
+}
+.item + .item{margin-top:12px}
+
+.item:hover{
+  border-color:var(--accent);
+  background:rgba(90,169,255,.06);
+}
+
+.item-head h3{
+  margin:0 0 6px;
+  font-size:17px;
+}
+.sub{
+  color:var(--muted);
+  font-size:14px;
+}
+.para{
+  margin:10px 0 0;
+  color:var(--text);
+}
+
+/* Bullets */
+.bullets{
+  margin:10px 0 0 18px;
+  padding:0;
+}
+.bullets li{margin:6px 0}
+
+/* Skills chips */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.chip{
+  padding:8px 12px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+  font-size:14px;
+  color:var(--text);
+}
+
+/* Footer */
+.footer{
+  opacity:.85;
+  text-align:center;
+  padding:18px 8px 26px;
+  font-size:13px;
+}
+
+/* Responsive */
+@media (max-width:560px){
+  .container{padding:16px}
+  .hero-inner{padding:20px}
+  .section{padding:18px}
+  .btn{width:100%; justify-content:center}
+}
+
+/* Print (Save as PDF) */
+@media print{
+  body{background:#fff;color:#000}
+  .card{
+    box-shadow:none;
+    border-color:#ddd;
+    background:#fff;
+  }
+  .btn,.actions{display:none !important}
+  a{color:inherit;text-decoration:underline}
+  .chip{
+    border-color:#ddd;
+    background:#fff;
+    color:#000;
+  }
+  .sub{color:#333}
+}
