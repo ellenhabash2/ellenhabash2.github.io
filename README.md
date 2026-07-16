@@ -1,15 +1,15 @@
-# 🌐 Ellen Habash — Web CV / Portfolio
+# Ellen Habash — Web CV / Portfolio
 
-Live Website:  
-👉 https://ellenhabash2.github.io
+Live Website:
+https://ellenhabash2.github.io
 
 
-## 📫 Contact
+## Contact
 
-📧 Email: ellenhabash2@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/ellen-habash-164571280/  
-💻 GitHub: https://github.com/ellenhabash2
+Email: ellenhabash2@gmail.com
+LinkedIn: https://www.linkedin.com/in/ellen-habash-164571280/
+GitHub: https://github.com/ellenhabash2
 
 ---
 
-© Ellen Habash
+Copyright Ellen Habash
